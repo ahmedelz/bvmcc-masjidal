@@ -2,15 +2,30 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <style>body { margin: 0; background: transparent; }</style>
+  <style>
+    body { 
+      margin: 0; 
+      background: transparent; 
+    }
+    .widget-container {
+      /* Scales the widget to 90% of its current size */
+      transform: scale(0.9);
+      /* Adjusts the transform origin to the top-left so it scales inward cleanly */
+      transform-origin: top left;
+      /* Adjust width to 111.11% (1 / 0.9) to prevent extra whitespace on the right when scaled */
+      width: 111.11%;
+    }
+  </style>
 </head>
 <body>
-  <script async src="https://widgets.masjidal.com/timetable/v0/widget.js"></script>
-  <masjidal-widget 
-    async 
-    widget-id="86bWfQCiytamuYEmiBMaT" 
-    type="prayer" 
-    api-key="msj_pk_clwf3W_jRm5seoeheQ1Dh5p261tvIUj3x__kY80X0F4">
-  </masjidal-widget>
+  <div class="widget-container">
+    <script async src="https://widgets.masjidal.com/timetable/v0/widget.js"></script>
+    <masjidal-widget 
+      async 
+      widget-id="86bWfQCiytamuYEmiBMaT" 
+      type="prayer" 
+      api-key="msj_pk_clwf3W_jRm5seoeheQ1Dh5p261tvIUj3x__kY80X0F4">
+    </masjidal-widget>
+  </div>
 </body>
 </html>
